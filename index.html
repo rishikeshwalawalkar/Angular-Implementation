@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script data-require="angular.js@1.5.3" data-semver="1.5.3" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller = "admincheck" >
+    <h1>Users</h1>
+    <ul ng-repeat = "rec in details">
+      <li>Name : {{rec.firstName}}</li>
+      <li>Role : {{rec.role}}</li>
+      <li>
+        <span ng-if = "rec.role == 'Admin'">
+          Location :<select>
+            <option ng-repeat = "city1 in rec.location">{{city1.city}}</option>
+          </select>
+        </span>
+        <span ng-if = "rec.role == 'User'">
+          Location : {{rec.location}}
+        </span>
+    </ul>
+  <!--  <input type ="text" class="form-control" ng-model = "search" />
+    <table class ="table table-bordered table-striped">
+      <tbody>
+        <tr class = "success">
+          <th>ID</th>
+          <th>State</th>
+          <th>Cars</th>
+          <th>Bikes</th>
+        </tr>
+        <tr ng-repeat="record in info | orderBy : '-cars' | filter:search" class = "warning">
+          <td>{{record.id}}</td>
+          <td>{{record.state}}</td>
+          <td>{{record.cars}}</td>
+          <td>{{record.bikes}}</td>
+        </tr>
+      </tbody>
+    </table> 
+    <select name="example">
+    <option value="A">A</option>
+    <option value="B">A</option>
+    <option value="-">Other</option>
+</select></li>-->
+    
+    <!--<table ng-controller="weathercontroller" class ="table table-bordered table-striped" >
+      <tr class = "success">
+        <th>ID</th>
+        <th>User Nmae</th>
+        <th>Avatar</th>
+        <th>IsAdmin</th>
+        <th>Change Status</th>
+      </tr>
+      <tr ng-repeat="record in forecast" class = "warning">
+      <td>{{record.id}}</td>
+      <td>{{record.login}}</td>
+      <td><img src = "{{record.avatar_url}}" width = "50" height="50" /></td>
+      <td>
+        <span ng-if = " record.site_admin == false" > Normal User
+        </span>
+        <span ng-if = " record.site_admin == true">
+          <button class = "btn btn-primary">Admin Login</button>
+          <button ng-click = "delete(record.id)" class = "btn btn-warning"> Remove ADmin</button>
+        </span>
+      </td>
+      <td>
+        <span ng-if = " record.site_admin == false">
+        <button ng-click = "toAdmin(record.id)" class = "btn btn-success"> Make Admin</button>
+        </span>
+      </td>
+      </tr>
+    </table>-->
+    
+   
+  </body>
+
+</html>

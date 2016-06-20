@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@1.5.3" data-semver="1.5.3" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+    
+  <body ng-controller = "hellocontroller">
+    <h1>Hello Plunker!</h1>
+    
+    <input type ="text" ng-model = "fname" />
+    <input type ="text" ng-model = "lname" />
+
+  <div>
+    {{fname}} , {{lname}}
+  </div>
+  <div ng-controller = "arraycontroller">
+    <ul>
+      <li ng-repeat="state in states track by $index">
+      <a href = "#" ng-click = "delState($index)">{{state}}</a>
+      </li>
+    </ul>
+    <form ng-submit = "addState()">
+    <input type ="text" ng-model = "newstate" />
+    <input type ="submit" value = "Add" />
+    </form>
+  </div>
+  
+  </body>
+
+</html>

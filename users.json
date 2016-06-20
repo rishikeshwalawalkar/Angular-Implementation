@@ -1,0 +1,21 @@
+[
+  {
+    "firstName" : "John",
+    "lastName" : "Smith",
+    "role" : "Admin",
+    "location" : [
+    {"city" : "Atlanta"},
+    {"city" : "Charlotte"},
+    {"city" : "Ney York"}
+    ] 
+  },
+  
+  {
+    "firstName" : "Jane",
+    "lastName" : "Doe",
+    "role" : "User",
+    "location" : "Atlanta" 
+
+  }
+  
+]
